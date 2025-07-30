@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ondieki & Ondieki Law Firm | Legal Excellence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3A8A',
+                        secondary: '#3B82F6',
+                        accent: '#2563EB',
+                        dark: '#1E40AF',
+                        light: '#EFF6FF'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 64, 175, 0.8)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .practice-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.3s;
+        }
+        
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+        
+        .testimonial-card {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+        
+        .testimonial-card.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="bg-primary text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-3">
+                    <i class="fas fa-balance-scale text-primary text-2xl"></i>
+                </div>
+                <a href="#" class="text-2xl font-bold">Ondieki & Ondieki Law Firm</a>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link hover:text-secondary transition">Home</a>
+                <a href="#about" class="nav-link hover:text-secondary transition">About</a>
+                <a href="#services" class="nav-link hover:text-secondary transition">Services</a>
+                <a href="#team" class="nav-link hover:text-secondary transition">Team</a>
+                <a href="#contact" class="nav-link hover:text-secondary transition">Contact</a>
+            </nav>
+            
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="mobile-menu bg-primary md:hidden">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="#home" class="block py-2 hover:text-secondary transition">Home</a>
+                <a href="#about" class="block py-2 hover:text-secondary transition">About</a>
+                <a href="#services" class="block py-2 hover:text-secondary transition">Services</a>
+                <a href="#team" class="block py-2 hover:text-secondary transition">Team</a>
+                <a href="#contact" class="block py-2 hover:text-secondary transition">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white min-h-screen flex items-center">
+        <div class="container mx-auto px-4 py-20">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Justice. Integrity. Excellence.</h1>
+                <p class="text-xl md:text-2xl mb-8 leading-relaxed">Ondieki & Ondieki Law Firm provides exceptional legal services with a commitment to our clients' success and justice.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-secondary hover:bg-accent text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-center">Schedule Consultation</a>
+                    <a href="#services" class="bg-transparent hover:bg-white hover:text-primary border-2 border-white text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-center">Our Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">About Our Firm</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto text-lg text-gray-600">With over 25 years of combined experience, we've built a reputation for excellence in legal advocacy.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Law firm building" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-bold text-primary mb-4">Our Commitment to Justice</h3>
+                    <p class="text-gray-600 mb-6">Founded in 2005, Ondieki & Ondieki has grown from a small practice to one of the most respected law firms in the region. Our founding partners share a vision of accessible, ethical legal representation for all clients.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold text-dark">Client-Centered Approach</h4>
+                                <p class="text-gray-600">We prioritize your needs and tailor our strategies to achieve your specific goals.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold text-dark">Proven Track Record</h4>
+                                <p class="text-gray-600">With hundreds of successful cases, we have the experience to handle complex legal matters.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold text-dark">Ethical Standards</h4>
+                                <p class="text-gray-600">We maintain the highest ethical standards in all our professional dealings.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Our Legal Services</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto text-lg text-gray-600">Comprehensive legal solutions tailored to your specific needs.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+                <!-- Service Card 1 -->
+                <div class="practice-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="h-48 bg-primary flex items-center justify-center">
+                        <i class="fas fa-gavel text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-3">Litigation</h3>
+                        <p class="text-gray-600 mb-4">Expert representation in civil and commercial litigation matters with a focus on achieving favorable outcomes.</p>
+                        <a href="#" class="text-secondary font-semibold hover:text-dark transition">Learn more →</a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="practice-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="h-48 bg-primary flex items-center justify-center">
+                        <i class="fas fa-handshake text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-3">Corporate Law</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive corporate legal services including mergers, acquisitions, and corporate governance.</p>
+                        <a href="#" class="text-secondary font-semibold hover:text-dark transition">Learn more →</a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="practice-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="h-48 bg-primary flex items-center justify-center">
+                        <i class="fas fa-home text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-3">Real Estate</h3>
+                        <p class="text-gray-600 mb-4">Full-service real estate legal support for transactions, disputes, and property development.</p>
+                        <a href="#" class="text-secondary font-semibold hover:text-dark transition">Learn more →</a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="practice-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="h-48 bg-primary flex items-center justify-center">
+                        <i class="fas fa-users text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-3">Family Law</h3>
+                        <p class="text-gray-600 mb-4">Compassionate guidance through divorce, child custody, and other family-related legal matters.</p>
+                        <a href="#" class="text-secondary font-semibold hover:text-dark transition">Learn more →</a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="practice-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="h-48 bg-primary flex items-center justify-center">
+                        <i class="fas fa-file-contract text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-3">Contract Law</h3>
+                        <p class="text-gray-600 mb-4">Drafting, reviewing, and negotiating contracts to protect your interests in business dealings.</p>
+                        <a href="#" class="text-secondary font-semibold hover:text-dark transition">Learn more →</a>
+                    </div>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="practice-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="h-48 bg-primary flex items-center justify-center">
+                        <i class="fas fa-lock text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-3">Intellectual Property</h3>
+                        <p class="text-gray-600 mb-4">Protection and enforcement of patents, trademarks, copyrights, and trade secrets.</p>
+                        <a href="#" class="text-secondary font-semibold hover:text-dark transition">Learn more →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Meet Our Team</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto text-lg text-gray-600">Dedicated legal professionals committed to your success.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="h-64 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-user-tie text-primary text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-1">Evans Ondieki</h3>
+                        <p class="text-secondary mb-3">Founder & Senior Advocate</p>
+                        <p class="text-gray-600 mb-4">With over 20 years of experience in corporate law, Evans brings unparalleled expertise to complex legal matters.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-primary hover:text-dark transition"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-primary hover:text-dark transition"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="h-64 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-user-tie text-primary text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-1">Alice Ondieki</h3>
+                        <p class="text-secondary mb-3">Founder & Senior Advocate</p>
+                        <p class="text-gray-600 mb-4">Specializing in litigation and dispute resolution, Alice has successfully represented clients in high-profile cases.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-primary hover:text-dark transition"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-primary hover:text-dark transition"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="h-64 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-user-tie text-primary text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-1">Denis Oyaro</h3>
+                        <p class="text-secondary mb-3">Advocate</p>
+                        <p class="text-gray-600 mb-4">Denis focuses on real estate and contract law, providing meticulous attention to detail for every client.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-primary hover:text-dark transition"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-primary hover:text-dark transition"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="h-64 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-user-tie text-primary text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-1">Nimrod Asiba</h3>
+                        <p class="text-secondary mb-3">Advocate</p>
+                        <p class="text-gray-600 mb-4">Nimrod specializes in intellectual property and corporate law, bringing innovative solutions to legal challenges.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-primary hover:text-dark transition"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-primary hover:text-dark transition"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 5 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <div class="h-64 bg-gray-200 flex items-center justify-center">
+                        <i class="fas fa-user-tie text-primary text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-1">Caleb Abuga</h3>
+                        <p class="text-secondary mb-3">Advocate</p>
+                        <p class="text-gray-600 mb-4">Caleb excels in family law and civil litigation, providing compassionate yet effective representation.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-primary hover:text-dark transition"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-primary hover:text-dark transition"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Client Testimonials</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto text-lg">Hear what our clients say about our services.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto relative">
+                <div class="testimonial-slider overflow-hidden">
+                    <div class="flex transition-transform duration-500 ease-in-out" id="testimonial-slides">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-card min-w-full px-4 active">
+                            <div class="bg-dark p-8 rounded-lg shadow-lg">
+                                <div class="flex items-center mb-6">
+                                    <div class="w-16 h-16 bg-gray-300 rounded-full mr-4"></div>
+                                    <div>
+                                        <h4 class="text-xl font-bold">David Kamau</h4>
+                                        <p class="text-secondary">CEO, Tech Solutions Ltd.</p>
+                                    </div>
+                                </div>
+                                <p class="text-lg italic">"Ondieki & Ondieki handled our corporate merger with exceptional professionalism. Their attention to detail and strategic advice saved us millions and ensured a smooth transition."</p>
+                                <div class="mt-4 flex">
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-card min-w-full px-4">
+                            <div class="bg-dark p-8 rounded-lg shadow-lg">
+                                <div class="flex items-center mb-6">
+                                    <div class="w-16 h-16 bg-gray-300 rounded-full mr-4"></div>
+                                    <div>
+                                        <h4 class="text-xl font-bold">Grace Mwende</h4>
+                                        <p class="text-secondary">Small Business Owner</p>
+                                    </div>
+                                </div>
+                                <p class="text-lg italic">"As a small business owner, I was intimidated by legal processes. The team at Ondieki & Ondieki made everything understandable and fought hard to protect my interests in a contract dispute."</p>
+                                <div class="mt-4 flex">
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-card min-w-full px-4">
+                            <div class="bg-dark p-8 rounded-lg shadow-lg">
+                                <div class="flex items-center mb-6">
+                                    <div class="w-16 h-16 bg-gray-300 rounded-full mr-4"></div>
+                                    <div>
+                                        <h4 class="text-xl font-bold">Robert Ochieng</h4>
+                                        <p class="text-secondary">Real Estate Developer</p>
+                                    </div>
+                                </div>
+                                <p class="text-lg italic">"Their real estate team navigated complex zoning laws for our development project. Their expertise saved us time and money while ensuring full compliance with all regulations."</p>
+                                <div class="mt-4 flex">
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                    <i class="fas fa-star text-yellow-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center mt-8 space-x-2">
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-secondary opacity-100" data-index="0"></button>
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-white opacity-30" data-index="1"></button>
+                    <button class="testimonial-dot w-3 h-3 rounded-full bg-white opacity-30" data-index="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Contact Us</h2>
+                <div class="w-24 h-1 bg-secondary mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto text-lg text-gray-600">Get in touch with our legal team for a consultation.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <div class="bg-light p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-primary mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-dark">Our Office</h4>
+                                    <p class="text-gray-600">123 Legal Avenue, Suite 500<br>Nairobi, Kenya</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-dark">Phone</h4>
+                                    <p class="text-gray-600">+254 700 123 456<br>+254 720 987 654</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-dark">Email</h4>
+                                    <p class="text-gray-600">info@ondiekilaw.com<br>consult@ondiekilaw.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-semibold text-dark">Hours</h4>
+                                    <p class="text-gray-600">Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: By appointment<br>Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-light p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-primary mb-6">Send Us a Message</h3>
+                        <form id="contact-form">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                                <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-primary hover:bg-dark text-white font-bold py-3 px-6 rounded-lg transition duration-300">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-balance-scale text-primary"></i>
+                        </div>
+                        <span class="text-xl font-bold">Ondieki & Ondieki Law Firm</span>
+                    </div>
+                    <p class="text-gray-300">Providing exceptional legal services with integrity and dedication since 2005.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-secondary transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-secondary transition">About Us</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-secondary transition">Services</a></li>
+                        <li><a href="#team" class="text-gray-300 hover:text-secondary transition">Our Team</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-secondary transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Practice Areas</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition">Litigation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition">Corporate Law</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition">Real Estate</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition">Family Law</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-secondary transition">Intellectual Property</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-secondary transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-secondary transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-secondary transition"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white hover:bg-secondary transition"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <p class="text-gray-300">Subscribe to our newsletter</p>
+                    <div class="flex mt-2">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full">
+                        <button class="bg-secondary hover:bg-accent text-white px-4 py-2 rounded-r-lg transition"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Ondieki & Ondieki Law Firm. All rights reserved.</p>
+                <div class="flex justify-center space-x-6 mt-4">
+                    <a href="#" class="hover:text-secondary transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-secondary transition">Terms of Service</a>
+                    <a href="#" class="hover:text-secondary transition">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (mobileMenu.classList.contains('open')) {
+                        mobileMenu.classList.remove('open');
+                    }
+                }
+            });
+        });
+        
+        // Testimonial slider
+        const testimonialSlides = document.querySelectorAll('.testimonial-card');
+        const testimonialDots = document.querySelectorAll('.testimonial-dot');
+        let currentTestimonial = 0;
+        
+        function showTestimonial(index) {
+            testimonialSlides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+            
+            testimonialDots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.remove('opacity-30');
+                    dot.classList.add('opacity-100');
+                } else {
+                    dot.classList.add('opacity-30');
+                    dot.classList.remove('opacity-100');
+                }
+            });
+        }
+        
+        testimonialDots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                currentTestimonial = parseInt(dot.getAttribute('data-index'));
+                showTestimonial(currentTestimonial);
+            });
+        });
+        
+        // Auto-rotate testimonials
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonialSlides.length;
+            showTestimonial(currentTestimonial);
+        }, 5000);
+        
+        // Form submission
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to a server
+            // For this example, we'll just show an alert
+            alert('Thank you for your message! We will contact you soon.');
+            contactForm.reset();
+        });
+        
+        // Scroll animation
+        const observerOptions = {
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.practice-card, .testimonial-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
